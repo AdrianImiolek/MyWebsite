@@ -1,0 +1,59 @@
+.fallingAnimation {
+	position: fixed;
+	width: 100%;
+	top: -20%;
+	min-height: 100vh;
+	height: 100vh;
+	z-index: -1000;
+	background-color: var(--primary-color);
+}
+
+.leaf {
+	position: relative;
+	opacity: 0.5;
+	color: var(--bg-color);
+	font-size: clamp(2rem, 2.5rem + 1vw, 4rem);
+}
+
+.leaf:nth-child(1) {
+	left: 5%;
+	animation: fall 12s infinite linear;
+}
+.leaf:nth-child(2) {
+	left: 50%;
+	animation: fall 17s infinite linear;
+}
+.leaf:nth-child(3) {
+	left: 75%;
+	animation: fall 20s infinite linear;
+}
+.leaf:nth-child(4) {
+	left: 15%;
+	animation: fall 15s infinite linear;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateX(0) translateY(0) rotate(0);
+	}
+
+	25% {
+		transform: translateX(10px) translateY(25vh) rotate(45deg);
+	}
+
+	50% {
+		transform: translateX(-10px) translateY(50vh) rotate(60deg);
+	}
+
+	75% {
+		transform: translateX(10px) translateY(75vh) rotate(45deg);
+	}
+
+	90% {
+		transform: translateX(-10px) translateY(100vh) rotate(60deg);
+	}
+
+	100% {
+		transform: translateX(10px) translateY(120vh) rotate(45deg);
+	}
+}

@@ -1,0 +1,64 @@
+.about {
+	&__content {
+		display: grid;
+		gap: var(--rem-xmd);
+	}
+	&__card {
+		padding: var(--rem-sm);
+		background-color: var(--card-bg-color);
+		border-radius: 20px;
+		&--employment {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__title {
+		margin: var(--rem-sm) 0;
+	}
+	&__skills {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+	&__skill {
+		margin: var(--rem-xsm);
+		padding: var(--rem-sm);
+		font-size: var(--clamp-txt);
+		text-align: center;
+		border-radius: 20px;
+		background-color: var(--main-color);
+		color: var(--bg-color);
+	}
+	&__txt {
+		font-size: var(--clamp-txt);
+		margin: var(--rem-md) 0;
+		line-height: var(--rem-lg);
+	}
+	&__btn {
+		margin: var(--rem-sm);
+		padding: var(--rem-sm);
+		font-size: var(--clamp-txt);
+		align-self: center;
+		border: none;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s ;
+		&:hover {
+			background-color: var(--secondary-color);
+			color: var(--text-color);
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.about {
+		&__content {
+		grid-template-columns: 1fr 1fr;
+		}
+		&__card {
+			&--employment {
+				grid-column-start: span 2;
+			}
+		}
+	}
+}

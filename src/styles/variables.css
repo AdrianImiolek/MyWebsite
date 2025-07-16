@@ -1,0 +1,37 @@
+:root {
+	--main-color: #68cf80;
+	--secondary-color: #2d683b;
+	--text-color: #ffffff;
+	--bg-color: #362b32;
+	--card-bg-color: #beb6ba;
+	--card-tools: #86d298;
+	--em-xsm: 0.5em;
+	--em-sm: 1em;
+	--em-md: 1.5em;
+	--em-xmd: 2em;
+	--em-lg: 2.5em;
+	--em-xlg: 3em;
+
+	--rem-xsm: 0.5rem;
+	--rem-sm: 1rem;
+	--rem-md: 1.5rem;
+	--rem-xmd: 2rem;
+	--rem-lg: 2.5rem;
+	--rem-xlg: 3rem;
+
+	--clamp-h1: clamp(1rem, 2.5rem + 1vw, 4rem);
+	--clamp-h2: clamp(1rem, 2rem + 1vw, 4rem);
+	--clamp-h3: clamp(1rem, 1.8rem + 1vw, 4rem);
+	--clamp-txt: clamp(1rem, 1.5rem + 1vw, 2rem);
+	--clamp-txt-sm: clamp(1rem, 1rem + 1vw, 2rem);
+}
+
+.dark {
+	--main-color: #2d683b;
+	--secondary-color: #86d298;
+	--text-color: #362b32;
+	--bg-color: #ffffff;
+	--card-bg-color: #423d40;
+	--card-tools: #42684b;
+}
+

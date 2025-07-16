@@ -1,0 +1,77 @@
+@import "./variables.css";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--text-color);
+	color: var(--bg-color);
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	margin: 0; /* Remove default margin */
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+}
+
+.green-accent {
+	color: var(--secondary-color);
+}
+
+.link {
+	text-decoration: none;
+}
+
+.title {
+	margin: var(--rem-xmd) 0;
+	font-size: clamp(1rem, 2rem + 1vw, 4rem);
+}
+
+.section {
+	margin: var(--rem-xlg) var(--rem-md);
+}
+
+.img {
+	width: 100%;
+}
+
+.h1 {
+	font-size: var(--clamp-h1);
+}
+
+.h2 {
+	font-size: var(--clamp-h2);
+	margin: var(--rem-lg) 0;
+}
+
+.h3 {
+	font-size: var(--clamp-h3);
+}
+
+.btn {
+	background-color: var(--main-color);
+	color: var(--bg-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.3s;
+	}
+}

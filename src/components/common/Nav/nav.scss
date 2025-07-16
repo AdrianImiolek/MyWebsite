@@ -1,0 +1,111 @@
+.navDesktop {
+	display: none;
+}
+
+.navMobile {
+	margin: var(--rem-md);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav {
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-link {
+			color: var(--bg-color);
+		}
+	}
+	&__theme {
+		&-toggle {
+			margin: 0 1rem;
+			padding: 0.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--bg-color);
+			background-color: transparent;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		&-icon {
+			color: var(--bg-color);
+			font-size: clamp(0.8rem, 1.5rem + 1vw, 2rem);
+		}
+	}
+	&__toggle {
+		position: relative;
+		z-index: 1000;
+		.bx-menu {
+			font-size: clamp(3rem, 1.5rem + 1vw, 4rem);
+		}
+	}
+	&__links {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		bottom: 0;
+		top: 0;
+		width: 70%;
+		right: -70%;
+		transition: 0.2s linear;
+		background-color: var(--main-color);
+		z-index: 999;
+
+		&-shadow {
+			position: fixed;
+			right: -100%;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 998;
+			&--active {
+				right: 0;
+			}
+		}
+
+		&--open {
+			right: 0;
+		}
+	}
+
+	&__link {
+		margin: var(--rem-md) var(--rem-md);
+		padding: var(--rem-md);
+		font-size: clamp(1rem, 2rem + 1vw, 4rem);
+		color: var(--bg-color);
+		transition: 0.3s;
+		border-radius: 20px;
+		&:hover {
+			background-color: var(--secondary-color);
+			color: var(--text-color);
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.navMobile {
+		display: none;
+	}
+	.navDesktop {
+		margin: var(--rem-md);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.nav {
+		&__links {
+			width: 50%;
+		}
+	}
+}
+
+.active {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+}
