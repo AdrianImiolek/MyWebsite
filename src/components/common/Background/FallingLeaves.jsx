@@ -1,3 +1,4 @@
+import React from "react";
 import "boxicons";
 import styles from "./fallingLeaves.module.css";
 export default function FallingLeaves() {

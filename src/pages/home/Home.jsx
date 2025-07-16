@@ -1,3 +1,4 @@
+import React from "react";
 import "./home.scss";
 import HomeMain from "../../components/page-specific/HomeMain/HomeMain.jsx";
 export default function Home() {

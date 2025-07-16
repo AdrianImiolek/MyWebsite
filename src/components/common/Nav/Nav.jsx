@@ -5,7 +5,7 @@ import "./nav.scss";
 import React, { useState } from "react";
 
 // Import the Link component from react-router-dom to create navigation links
-import { Link , NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Nav() {
 	//State to track if mobile menu is open or closed
@@ -55,15 +55,18 @@ export default function Nav() {
 					aria-expanded={isMenuOpen}
 					onClick={toggleMenu}>
 					{/*Hamburger icon - add 'active' class when menu is open  */}
-					<i 
-						className={`bx bx-menu hamburger ${isMenuOpen ? "hamburger--active" : ""}`}
+					<i
+						className={`bx bx-menu hamburger ${
+							isMenuOpen ? "hamburger--active" : ""
+						}`}
 						name="menu"></i>
 				</button>
 
 				<div
 					className={`nav__links-shadow ${
 						isMenuOpen ? "nav__links-shadow--active" : ""
-					} `} onClick={closeMenu}></div>
+					} `}
+					onClick={closeMenu}></div>
 				{/* Add 'nav__links--open' class when menu is open */}
 				<div className={`nav__links ${isMenuOpen ? "nav__links--open" : ""}`}>
 					<Link className="nav__link link" to="/about" onClick={closeMenu}>

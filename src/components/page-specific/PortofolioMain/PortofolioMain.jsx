@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "../../common/Card/Card";
 export default function PortfolioMain(props) {
 	const cardsContent = [
@@ -23,23 +24,23 @@ export default function PortfolioMain(props) {
 	const featuredProjects = cardsContent.slice(0, 6); // Only show 6
 
 	return (
-			<main className="main">
-				<div className="projects section">
-					<h2 className="projects__title h2">
-						My <span className="green-accent">projects</span>
-					</h2>
-					<div className="projects__cards">
-						{featuredProjects.map((card, index) => (
-							<Card
-								key={index} //React needs this to track each component efficiently
-								title={card.title}
-								text={card.text}
-								skill={card.skill}
-								link={card.link}
-							/>
-						))}
-					</div>
+		<main className="main">
+			<div className="projects section">
+				<h2 className="projects__title h2">
+					My <span className="green-accent">projects</span>
+				</h2>
+				<div className="projects__cards">
+					{featuredProjects.map((card, index) => (
+						<Card
+							key={index} //React needs this to track each component efficiently
+							title={card.title}
+							text={card.text}
+							skill={card.skill}
+							link={card.link}
+						/>
+					))}
 				</div>
-			</main>
+			</div>
+		</main>
 	);
 }

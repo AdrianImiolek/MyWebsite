@@ -1,3 +1,4 @@
+import React from "react";
 import "./contactMain.scss";
 export default function ContactMain() {
 	return (

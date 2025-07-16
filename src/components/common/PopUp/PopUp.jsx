@@ -1,5 +1,6 @@
+import React from "react";
 import "./popup.scss";
-export default function PopUp({ onClose}) {
+export default function PopUp({ onClose }) {
 	return (
 		<>
 			<div className="popup-shadow" onClick={onClose}></div>

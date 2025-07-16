@@ -1,5 +1,6 @@
+import React from "react";
 import "./card.scss";
-export default function Cards({ title, text, link,skill }) {
+export default function Cards({ title, text, link, skill }) {
 	return (
 		<div className="card">
 			<div className="card__text-container">
@@ -8,14 +9,16 @@ export default function Cards({ title, text, link,skill }) {
 			</div>
 			<div className="card__skills-container">
 				{skill.map((skillItem, index) => (
-					<p key={index} className="card__skill">{skillItem}</p>
+					<p key={index} className="card__skill">
+						{skillItem}
+					</p>
 				))}
 			</div>
 			<div className="card__btn-container">
-					<a href={link} className="card__btn btn link" target="_blank">
-						More on Github
-					</a>
-				</div>
+				<a href={link} className="card__btn btn link" target="_blank">
+					More on Github
+				</a>
+			</div>
 		</div>
 	);
 }

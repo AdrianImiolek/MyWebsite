@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "../../common/Card/Card";
 export default function Main(props) {
 	const cardsContent = [

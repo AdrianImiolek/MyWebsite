@@ -1,3 +1,4 @@
+import React from 'react'
 import "./styles/index.css";
 
 import NavMobile from "./components/common/Nav/Nav";
