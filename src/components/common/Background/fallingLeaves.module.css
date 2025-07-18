@@ -57,3 +57,9 @@
 		transform: translateX(10px) translateY(120vh) rotate(45deg);
 	}
 }
+
+@media (min-width: 1700px) {
+	.leaf:nth-child(3) {
+		left: 65%;
+	}
+}

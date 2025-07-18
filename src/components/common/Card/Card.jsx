@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.scss";
-export default function Cards({ title, text, link, skill }) {
+export default function Card({ title, text, link, skill }) {
 	return (
 		<div className="card">
 			<div className="card__text-container">
