@@ -36,8 +36,17 @@
 		}
 	}
 	&__toggle {
+		border: 3px solid;
+		border-color: var(--bg-color);
+		color: var(--bg-color);
+		background-color: var(--text-color);
+		border-radius: 5px;
 		position: relative;
 		z-index: 1000;
+		transition: 0.3s;
+		&:hover {
+			cursor: pointer;
+		}
 		.bx-menu {
 			font-size: clamp(3rem, 1.5rem + 1vw, 4rem);
 		}
