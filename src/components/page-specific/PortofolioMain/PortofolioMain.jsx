@@ -6,7 +6,7 @@ export default function PortfolioMain(props) {
 			title: "Click 2 Escape",
 			text: "A showcase website for a point-and-click game studio, designed to highlight their games while providing a simple and user-friendly navigation experience.",
 			skill: ["HTML", "CSS", "SASS", "BEM", "JAVASCRIPT"],
-			link: "https://click2escape.com/",
+			link: "https://github.com/AdrianImiolek/C2E-website",
 		},
 		{
 			title: "Willow & Oak",
