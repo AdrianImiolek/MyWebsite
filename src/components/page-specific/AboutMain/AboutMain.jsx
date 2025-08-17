@@ -6,7 +6,15 @@ export default function AboutMain() {
 	const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
 	const togglePopUp = () => {
-		setIsPopUpOpen(!isPopUpOpen);
+		if (!isPopUpOpen) {
+			// Opening popup - disable scrolling
+			document.body.style.overflowY = "hidden";
+			setIsPopUpOpen(true);
+		} else {
+			// Closing popup - enable scrolling
+			document.body.style.overflowY = "auto";
+			setIsPopUpOpen(false);
+		}
 	};
 	return (
 		<main className="main">
@@ -56,7 +64,9 @@ export default function AboutMain() {
 							end user at the center of every decision.
 						</p>
 						<p className="about__txt">
-							Fun fact: My coding setup includes a four-legged supervisor named Zrazik who ensures I take proper breaks and maintains strict quality control over my keyboard usage.
+							Fun fact: My coding setup includes a four-legged supervisor named
+							Zrazik who ensures I take proper breaks and maintains strict
+							quality control over my keyboard usage.
 						</p>
 					</div>
 					<div className="about__card about__card--employment">
