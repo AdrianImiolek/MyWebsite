@@ -1,0 +1,28 @@
+//Shows versions of react and vite
+node -v 
+npm -v
+
+//Create the project
+npm create vite@latest
+
+//You will select these
+✔ Project name: » my-react-app
+✔ Select a framework: » React
+✔ Select a variant: » JavaScript
+
+//Go into folder and install/ run dev is like gulp
+cd my-react-app
+npm install
+npm run dev
+
+//Sass
+npm install sass
+
+
+- npm create vite@latest
+- go into folder
+- npm install
+- npm install sass
+- npm install react-router-dom (links)
+- npm install framer-motion(Smooth transitions between links)
+- npm run dev
