@@ -15,14 +15,14 @@
 		overflow: hidden;
 		background-color: var(--card-bg-color);
 		&__text {
-			margin: var(--rem-sm) 0 0;
+			margin: var(--rem-xmd) 0;
 			font-size: var(--clamp-txt);
 			line-height: var(--rem-lg);
 		}
 
 		&__skills {
 			&-container {
-				margin: var(--rem-md) 0;
+				margin: var(--rem-xmd) 0;
 				display: flex;
 				align-items: center;
 				flex-wrap: wrap;
@@ -38,7 +38,7 @@
 			font-size: var(--clamp-txt-sm);
 		}
 		&__btn {
-			margin: var(--rem-xsm);
+			margin: var(--rem-xmd) 0;
 			padding: var(--rem-sm);
 			border-radius: 20px;
 			font-size: var(--clamp-txt);
@@ -54,6 +54,7 @@
 			}
 		}
 	}
+
 }
 
 @media (min-width: 992px) {

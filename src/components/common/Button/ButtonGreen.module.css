@@ -1,0 +1,15 @@
+.button {
+  margin: var(--rem-sm);
+  padding: var(--rem-xmd);
+  border-radius: 20px;
+  font-size: var(--clamp-txt);
+  transition: 0.3s;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color)
+}

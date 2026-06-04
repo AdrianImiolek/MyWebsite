@@ -3,21 +3,33 @@
 }
 
 .navMobile {
-	margin: var(--rem-md);
+	padding: var(--rem-md);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .nav {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+	background: var(--text-color);
+	box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+
 	&__logo {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		&-link {
 			color: var(--bg-color);
+			font-size: var(--clamp-logo);
+			font-weight: bold;
 		}
 	}
+
 	&__theme {
 		&-toggle {
 			margin: 0 1rem;
@@ -30,11 +42,13 @@
 			border-radius: 50%;
 			cursor: pointer;
 		}
+
 		&-icon {
 			color: var(--bg-color);
 			font-size: clamp(0.8rem, 1.5rem + 1vw, 2rem);
 		}
 	}
+
 	&__toggle {
 		border: 3px solid;
 		border-color: var(--bg-color);
@@ -44,13 +58,16 @@
 		position: relative;
 		z-index: 1000;
 		transition: 0.3s;
+
 		&:hover {
 			cursor: pointer;
 		}
+
 		.bx-menu {
 			font-size: clamp(3rem, 1.5rem + 1vw, 4rem);
 		}
 	}
+
 	&__links {
 		position: fixed;
 		display: flex;
@@ -73,9 +90,12 @@
 			bottom: 0;
 			background-color: rgba(0, 0, 0, 0.5);
 			z-index: 998;
+			opacity: 0;
+			transition: opacity 0.3s;
 			&--active {
 				right: 0;
-			}
+				opacity: 1;
+			}	
 		}
 
 		&--open {
@@ -90,9 +110,9 @@
 		color: var(--bg-color);
 		transition: 0.3s;
 		border-radius: 20px;
+
 		&:hover {
-			background-color: var(--secondary-color);
-			color: var(--text-color);
+			color: var(--secondary-color);
 		}
 	}
 }
@@ -101,12 +121,14 @@
 	.navMobile {
 		display: none;
 	}
+
 	.navDesktop {
-		margin: var(--rem-md);
+		padding: var(--rem-md);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
+
 	.nav {
 		&__links {
 			width: 50%;
@@ -115,6 +137,6 @@
 }
 
 .active {
-	background-color: var(--secondary-color);
-	color: var(--text-color);
+	color: var(--secondary-color);
+	border-bottom: 1px black;
 }

@@ -25,6 +25,7 @@ export default function Main(props) {
 
 	return (
 		<main className="main">
+			
 			<div className="projects section" id="projects">
 				<h2 className="projects__title h2">
 					My <span className="green-accent">projects</span>

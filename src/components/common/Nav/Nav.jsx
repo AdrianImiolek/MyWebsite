@@ -33,7 +33,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<nav className="navMobile">
+			<nav className="nav navMobile ">
 				<div className="nav__logo">
 					<Link className="nav__logo-link link" to="/">
 						<h1 className="nav__title h1">
@@ -81,12 +81,12 @@ export default function Nav() {
 				</div>
 			</nav>
 
-			<div className="navDesktop">
+			<nav className="nav navDesktop">
 				<div className="nav__logo">
 					<Link className="nav__logo-link link" to="/">
-						<h1 className="nav__title h1">
+						<p className="nav__title">
 							adek.<span className="green-accent">dev</span>
-						</h1>
+						</p>
 					</Link>
 					<button
 						className="nav__theme-toggle"
@@ -106,7 +106,7 @@ export default function Nav() {
 						Contact
 					</NavLink>
 				</div>
-			</div>
+			</nav>
 		</>
 	);
 }

@@ -30,8 +30,8 @@ function AnimatedRoutes() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				transition={{ duration: 0.6 }}
-				style={{ minHeight: "82vh", display: "flex", 'flex-direction': "column"}}> 
+				transition={{ duration: 0.3 }}
+				style={{ minHeight: "82vh", display: "flex", 'flex-direction': "column" , 'position': "relative"}}>
 				{/* Routes component contains all your route definitions */}
 				<Routes location={location}>
 					{/* Route matches the URL path '/' and renders the Home component */}
@@ -52,7 +52,9 @@ function AppContent() {
 			{/* The Nav component contains navigation links that users click to switch pages */}
 			<NavMobile />
 			{/* AnimatedRoutes component handles the routing with fade animations */}
-			<AnimatedRoutes />
+			<div className="wrapper">
+				<AnimatedRoutes />
+			</div>
 			<Footer />
 		</>
 	);
@@ -62,12 +64,14 @@ function AppContent() {
 function App() {
 	return (
 		// Wrap everything inside <Router> so routing works and navigation can happen without full page reload
-		<div className="wrapper">
+		<>
+
 			<FallingLeaves />
 			<Router>
 				<AppContent />
+
 			</Router>
-		</div>
+		</>
 	);
 }
 
