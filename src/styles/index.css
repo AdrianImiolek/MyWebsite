@@ -53,9 +53,11 @@ body {
 
 .img__container {
 	width: 100%;
-	aspect-ratio: 16 / 9;
-	background: transparent;
-	transition: 0.3s
+	width: 100%;
+    min-height: 300px;
+    background: transparent;
+    transition: 0.3s;
+    overflow: hidden;
 }
 
 
