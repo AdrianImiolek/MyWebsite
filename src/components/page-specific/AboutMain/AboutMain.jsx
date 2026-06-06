@@ -19,8 +19,8 @@ export default function AboutMain() {
 
 	const skills = [
 		{ id: 1, text: "English" },
-		{ id: 2, text: "Html" },
-		{ id: 3, text: "Css" },
+		{ id: 2, text: "HTML" },
+		{ id: 3, text: "CSS" },
 		{ id: 4, text: "JavaScript" },
 		{ id: 5, text: "RWD" },
 		{ id: 6, text: "React" },
