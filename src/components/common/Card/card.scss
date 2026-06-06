@@ -16,6 +16,7 @@
 		&__title {
 			padding: var(--rem-sm) 0;
 		}
+
 		&__img {
 			width: 100%;
 			max-height: 400px;
@@ -86,14 +87,6 @@
 			gap: var(--rem-lg);
 		}
 	}
-
-	.card {
-		display: grid;
-		grid-template-rows: subgrid;
-		grid-row: span 5;
-	}
-
-
 }
 
 
@@ -105,12 +98,6 @@
 			grid-template-rows: auto;
 			align-items: stretch;
 			gap: var(--rem-md);
-		}
-
-		.card {
-			display: grid;
-			grid-template-rows: subgrid;
-			grid-row: span 6;
 		}
 	}
 }

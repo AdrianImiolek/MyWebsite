@@ -1,4 +1,5 @@
 // Import CSS styles
+import { transform } from "framer-motion";
 import "./nav.scss";
 
 // Import React and useState hook
@@ -26,9 +27,22 @@ export default function Nav() {
 
 	const [isDark, setIsDark] = useState(false);
 
-	const toggleTheme = () => {
-		setIsDark(!isDark);
-		document.documentElement.classList.toggle("dark");
+	const toggleTheme = (e) => {
+		const icon = e.target
+		icon.animate(
+			[
+				{ transform: "rotate(0)" },
+				{ transform: "rotate(45deg)" },
+				{ transform: "rotate(-25deg)" },
+			],
+			{
+				duration: 300,
+			}
+		)
+		setTimeout(() => {
+			setIsDark(!isDark);
+			document.documentElement.classList.toggle("dark");
+		}, 320)
 	};
 
 	return (
@@ -44,7 +58,7 @@ export default function Nav() {
 						className="nav__theme-toggle"
 						aria-label="Toggle dark/light mode"
 						onClick={toggleTheme}>
-						<i className="nav__theme-icon bx bxs-sun"></i>
+						<i className={`nav__theme-icon bx ${isDark ? "bxs-sun" : "bxs-moon"}`}></i>
 					</button>
 				</div>
 
@@ -56,16 +70,14 @@ export default function Nav() {
 					onClick={toggleMenu}>
 					{/*Hamburger icon - add 'active' class when menu is open  */}
 					<i
-						className={`bx bx-menu hamburger ${
-							isMenuOpen ? "hamburger--active" : ""
-						}`}
+						className={`bx bx-menu hamburger ${isMenuOpen ? "hamburger--active" : ""
+							}`}
 						name="menu"></i>
 				</button>
 
 				<div
-					className={`nav__links-shadow ${
-						isMenuOpen ? "nav__links-shadow--active" : ""
-					} `}
+					className={`nav__links-shadow ${isMenuOpen ? "nav__links-shadow--active" : ""
+						} `}
 					onClick={closeMenu}></div>
 				{/* Add 'nav__links--open' class when menu is open */}
 				<div className={`nav__links ${isMenuOpen ? "nav__links--open" : ""}`}>
@@ -92,7 +104,7 @@ export default function Nav() {
 						className="nav__theme-toggle"
 						aria-label="Toggle dark/light mode"
 						onClick={toggleTheme}>
-						<i className="nav__theme-icon bx bxs-sun"></i>
+						<i className={`nav__theme-icon bx ${isDark ? "bxs-sun" : "bxs-moon"}`}></i>
 					</button>
 				</div>
 				<div className="nav__desktop-links">

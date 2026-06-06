@@ -11,10 +11,10 @@
 
 .nav {
 	position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 	background: var(--text-color);
 	box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
 
@@ -33,7 +33,6 @@
 	&__theme {
 		&-toggle {
 			margin: 0 1rem;
-			padding: 0.5rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -44,9 +43,11 @@
 		}
 
 		&-icon {
+			padding: 0.5rem;
 			color: var(--bg-color);
 			font-size: clamp(0.8rem, 1.5rem + 1vw, 2rem);
 		}
+
 	}
 
 	&__toggle {
@@ -92,10 +93,11 @@
 			z-index: 998;
 			opacity: 0;
 			transition: opacity 0.3s;
+
 			&--active {
 				right: 0;
 				opacity: 1;
-			}	
+			}
 		}
 
 		&--open {

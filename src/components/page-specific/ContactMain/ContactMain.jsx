@@ -23,7 +23,7 @@ export default function ContactMain() {
 					</h2>
 					<div className="contact__content">
 						<div className="contact__content__links">
-							<ButtonGreen className="contact__content__link" link={"mailto:contact@adek.dev"} icon={"bx bx-envelope"} text={"Message me"} />
+							<ButtonGreen className="contact__content__link" link={"mailto:contact@adek.dev"} icon={"bx bx-envelope"} text={"Message us"} />
 							<ButtonGreen className="contact__content__link" link={"https://www.linkedin.com/in/adrian-imiolek/"} icon={"bx bxl-linkedin-square"} text={"Linkedin"} target={"_blank"} />
 							<ButtonGreen className="contact__content__link" link="" text={isClicked ? "Copied to clipboard!" : "Copy email: contact@adek.dev"} onClick={() => copyToClipboard("contact@adek.dev")} />
 						</div>
