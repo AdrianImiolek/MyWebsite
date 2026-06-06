@@ -37,13 +37,22 @@
 	--card-bg-color: #423d40;
 	--card-tools: #42684b;
   }
-}
 
- .dark {
+  .dark {
 	--main-color: #68cf80;
 	--secondary-color: #2d683b;
 	--text-color: #ffffff;
 	--bg-color: #362b32;
 	--card-bg-color: #beb6ba;
 	--card-tools: #86d298;
+  }
+}
+
+ .dark {
+	--main-color: #2d683b;
+	--secondary-color: #86d298;
+	--text-color: #362b32;
+	--bg-color: #ffffff;
+	--card-bg-color: #423d40;
+	--card-tools: #42684b;
 } 

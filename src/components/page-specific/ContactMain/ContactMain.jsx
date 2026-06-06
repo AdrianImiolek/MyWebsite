@@ -27,7 +27,6 @@ export default function ContactMain() {
 							<ButtonGreen className="contact__content__link" link={"https://www.linkedin.com/in/adrian-imiolek/"} icon={"bx bxl-linkedin-square"} text={"Linkedin"} target={"_blank"} />
 							<ButtonGreen className="contact__content__link" link="" text={isClicked ? "Copied to clipboard!" : "Copy email: contact@adek.dev"} onClick={() => copyToClipboard("contact@adek.dev")} />
 						</div>
-						{/* This inline prevents layout shifts */}
 						<div className="img__container">
 							<img className="contact__image" src="/images/AdrianAndZrazik.webp" />
 						</div>

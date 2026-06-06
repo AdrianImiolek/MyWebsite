@@ -7,7 +7,7 @@ export default function Card({ title, text, link, skill, img }) {
 			<div className="card__text-container">
 				<h3 className="card__title h3">{title}</h3>
 			</div>
-			<div className="img__container">
+			<div className="card__img__container">
 				<img className="card__img" src={img} />
 			</div>
 			<div className="card__text-container">

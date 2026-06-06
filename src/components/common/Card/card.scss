@@ -21,6 +21,12 @@
 			width: 100%;
 			max-height: 400px;
 			object-fit: cover;
+			&__container {
+				width: 100%;
+				max-height: 400px;
+				background: transparent;
+				transition: 0.3s;
+			}
 		}
 
 		&__text {
