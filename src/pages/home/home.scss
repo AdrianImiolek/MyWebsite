@@ -11,7 +11,8 @@
 
 		&--opportunities {
 			display: flex;
-			align-items: center;;
+			align-items: center;
+			;
 		}
 	}
 
@@ -27,6 +28,8 @@
 			padding: var(--rem-md);
 			max-width: 100%;
 			max-height: 800px;
+			width: auto;
+			height: auto; 
 		}
 	}
 
@@ -55,5 +58,5 @@
 }
 
 .bx-briefcase-alt-2 {
-		margin: var(--rem-sm);
+	margin: var(--rem-sm);
 }

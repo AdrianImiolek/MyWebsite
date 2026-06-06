@@ -35,6 +35,8 @@ export default function Home() {
 						className="header__hero-img"
 						src="images/AdrianImiolek.webp"
 						alt="Picture depicting Adrian Imiolek."
+						width={1161}
+						height={1796}
 					/>
 				</div>
 			</header>
