@@ -30,7 +30,7 @@ export default function Home() {
 					</div>
 
 				</div>
-				<div className="header__hero-container">
+				<div className="header__hero-container img__container">
 					<img
 						className="header__hero-img"
 						src="images/AdrianImiolek.webp"

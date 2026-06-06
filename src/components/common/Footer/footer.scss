@@ -1,8 +1,19 @@
 .footer {
-	margin: var(--rem-md) 0;
+	padding: var(--rem-md);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+
+	&__img {
+		position: absolute;
+		left: 0;
+		max-width: 100px;
+		max-height: auto;
+		z-index: -1;
+
+	}
+
 	&__link {
 		margin: var(--rem-xsm) var(--rem-xsm);
 		padding: var(--rem-sm);
@@ -11,15 +22,23 @@
 		border: 2px solid;
 		border-radius: 20px;
 		transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
 		&:hover {
 			background-color: var(--bg-color);
 			color: var(--text-color);
-			transform: scale(1.1);		
+			transform: scale(1.1);
 		}
 	}
 }
 
+@media(min-width: 400px) {
+	.footer {
+		flex-direction: row;
+	}
+}
+
 @media (min-width: 992px) {
+
 	.footer {
 		&__link {
 			margin: var(--rem-xsm) var(--rem-xlg);

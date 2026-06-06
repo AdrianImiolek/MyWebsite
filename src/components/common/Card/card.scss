@@ -1,10 +1,8 @@
 .projects {
 	&__cards {
 		display: flex;
-		align-items: stretch;
-		justify-content: center;
 		flex-direction: column;
-		flex-wrap: wrap;
+		align-items: stretch;
 		gap: var(--rem-lg) 0;
 	}
 
@@ -14,40 +12,60 @@
 		border-radius: 20px;
 		overflow: hidden;
 		background-color: var(--card-bg-color);
+
+		&__title {
+			padding: var(--rem-sm) 0;
+		}
+		&__img {
+			width: 100%;
+			max-height: 400px;
+			object-fit: cover;
+		}
+
 		&__text {
-			margin: var(--rem-xmd) 0;
+			padding: var(--rem-sm) 0;
 			font-size: var(--clamp-txt);
 			line-height: var(--rem-lg);
 		}
 
+
 		&__skills {
 			&-container {
-				margin: var(--rem-xmd) 0;
+				padding: var(--rem-xsm);
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				flex-wrap: wrap;
 				gap: 8px;
 			}
 		}
 
 		&__skill {
-			display: inline;
-			padding: var(--rem-sm);
+			display: flex;
+			align-items: center;
+			padding: var(--rem-md);
 			background-color: var(--card-tools);
 			border-radius: 20px;
-			font-size: var(--clamp-txt-sm);
+			font-size: var(--clamp-txt);
+
+			&__icon {
+				font-size: var(--clamp-txt);
+			}
 		}
+
 		&__btn {
 			margin: var(--rem-xmd) 0;
 			padding: var(--rem-sm);
 			border-radius: 20px;
 			font-size: var(--clamp-txt);
 			transition: 0.3s;
+
 			&:hover {
 				background-color: var(--secondary-color);
 				color: var(--text-color);
 			}
+
 			&-container {
+				padding: var(--rem-xsm) 0;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -57,21 +75,42 @@
 
 }
 
+
+@media(min-width:700px) {
+	.projects {
+		&__cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			align-items: stretch;
+			gap: var(--rem-lg);
+		}
+	}
+
+	.card {
+		display: grid;
+		grid-template-rows: subgrid;
+		grid-row: span 5;
+	}
+
+
+}
+
+
 @media (min-width: 992px) {
 	.projects {
 		&__cards {
-			display: flex;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: auto;
 			align-items: stretch;
-			justify-content: space-between;
-			flex-direction: row;
 			gap: var(--rem-md);
 		}
 
 		.card {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-			flex: 1 1 0;
+			display: grid;
+			grid-template-rows: subgrid;
+			grid-row: span 6;
 		}
 	}
 }

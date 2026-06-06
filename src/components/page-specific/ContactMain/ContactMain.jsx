@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contactMain.scss";
+import ButtonGreen from "../../common/Button/ButtonGreen"
 export default function ContactMain() {
+
+	const [isClicked, setIsClicked] = useState(false);
+
+	const copyToClipboard = (text) => {
+		navigator.clipboard.writeText(text);
+		setIsClicked(!isClicked)
+		setTimeout(() => {
+			setIsClicked(false)
+		}, 2000)
+	}
+
 	return (
 		<>
 			<main className="main">
@@ -9,21 +21,16 @@ export default function ContactMain() {
 						Choose <span className="green-accent">your</span> way to contact{" "}
 						<span className="green-accent">us</span>:
 					</h2>
-					<div className="contact__links ">
-						<a className="contact__link link" href="mailto:contact@adek.dev">
-							<i class="bx bxs-envelope"></i> email
-						</a>
-						<img
-							className="img img-section__img"
-							src="/images/contact.png"
-							alt="Picture depicting me and my cat Zrazik in studio Ghibli style."
-						/>
-						<a
-							className="contact__link link"
-							target="_blank"
-							href="https://www.linkedin.com/in/adrian-imio%C5%82ek-a740a6375/">
-							<i class="bx bxl-linkedin-square"></i> linkedin
-						</a>
+					<div className="contact__content">
+						<div className="contact__content__links">
+							<ButtonGreen className="contact__content__link" link={"mailto:contact@adek.dev"} icon={"bx bx-envelope"} text={"Message me"} />
+							<ButtonGreen className="contact__content__link" link={"https://www.linkedin.com/in/adrian-imiolek/"} icon={"bx bxl-linkedin-square"} text={"Linkedin"} target={"_blank"} />
+							<ButtonGreen className="contact__content__link" link="" text={isClicked ? "Copied to clipboard!" : "Copy email: contact@adek.dev"} onClick={() => copyToClipboard("contact@adek.dev")} />
+						</div>
+						{/* This inline prevents layout shifts */}
+						<div className="img__container">
+							<img className="contact__image" src="/images/AdrianAndZrazik.webp" />
+						</div>
 					</div>
 				</section>
 			</main>

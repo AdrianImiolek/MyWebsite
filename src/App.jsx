@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./styles/index.css";
+
 
 import NavMobile from "./components/common/Nav/Nav";
 import About from "./pages/about/About";
@@ -22,6 +23,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function AnimatedRoutes() {
 	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
 
 	return (
 		<AnimatePresence mode="wait">
@@ -31,16 +35,15 @@ function AnimatedRoutes() {
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
 				transition={{ duration: 0.3 }}
-				style={{ minHeight: "82vh", display: "flex", 'flex-direction': "column" , 'position': "relative"}}>
-				{/* Routes component contains all your route definitions */}
+				style={{ minHeight: "82vh", display: "flex", flexDirection: "column" }}>
 				<Routes location={location}>
-					{/* Route matches the URL path '/' and renders the Home component */}
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
+				<Footer />
 			</motion.div>
 		</AnimatePresence>
 	);
@@ -55,7 +58,6 @@ function AppContent() {
 			<div className="wrapper">
 				<AnimatedRoutes />
 			</div>
-			<Footer />
 		</>
 	);
 }

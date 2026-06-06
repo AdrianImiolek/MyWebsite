@@ -51,6 +51,14 @@ body {
 	width: 100%;
 }
 
+.img__container {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: transparent;
+	transition: 0.3s
+}
+
+
 .h1 {
 	font-size: var(--clamp-h1);
 }

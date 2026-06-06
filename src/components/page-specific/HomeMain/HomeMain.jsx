@@ -1,40 +1,65 @@
 import React from "react";
 import Card from "../../common/Card/Card";
+
+
 export default function Main(props) {
+
+
+
 	const cardsContent = [
 		{
-			title: "Click 2 Escape",
+			index: 1,
+			title: "Kawusia",
+			img: "/images/Kawusia.webp",
 			text: "A showcase website for a point-and-click game studio, designed to highlight their games while providing a simple and user-friendly navigation experience.",
-			skill: ["HTML", "CSS", "SASS", "BEM", "JAVASCRIPT"],
-			link: "https://github.com/AdrianImiolek/C2E-website",
+			skill: [
+				{ id:1, name: "React", icon: "bxl-react" },
+				{ id:2, name: "Tailwind", icon: "bxl-tailwind-css" },
+				{ id:3, name: "JavaScript", icon: "bxl-javascript" },
+			],
+			link: "https://github.com/AdrianImiolek/KawusiaWebsite",
 		},
 		{
-			title: "Willow & Oak",
+			index: 2,
+			title: "Plant Database",
 			text: "A modern, nature-inspired website for a fictional brand focused on clean design, responsive layout, and interactive elements to enhance the user experience.",
-			skill: ["HTML", "CSS", "SASS", "BEM", "JAVASCRIPT"],
-			link: "https://github.com/AdrianImiolek/Willow-and-Oak",
+			img: "/images/PlantDatabase.webp",
+			skill: [
+				{ id:1, name: "React", icon: "bxl-react" },
+				{ id:2, name: "Tailwind", icon: "bxl-tailwind-css" },
+				{ id:3, name: "JavaScript", icon: "bxl-javascript" },
+				{ id:4, name: "Node.js", icon: "bxl-nodejs" },
+			],
+			link: "https://github.com/AdrianImiolek/Plant-Search",
 		},
+
 		{
-			title: "Flowerist",
+			index: 3,
+			title: "Springfield",
 			text: "A relaxing browser game where players grow and manage flowers to generate resources, featuring ambient music, soft visuals, and simple progression mechanics.",
-			skill: ["HTML", "CSS", "SASS", "BEM", "JAVASCRIPT"],
-			link: "https://github.com/AdrianImiolek/Flowerist",
+			img: "/images/Springfield.webp",
+			skill: [
+				{ id:1, name: "React", icon: "bxl-react" },
+				{ id:2, name: "Tailwind", icon: "bxl-tailwind-css" },
+				{ id:3, name: "JavaScript", icon: "bxl-javascript" },
+			],
+			link: "https://github.com/AdrianImiolek/springfield",
 		},
 	];
-	const featuredProjects = cardsContent.slice(0, 3); // Only show 3
+
 
 	return (
 		<main className="main">
-			
 			<div className="projects section" id="projects">
 				<h2 className="projects__title h2">
 					My <span className="green-accent">projects</span>
 				</h2>
 				<div className="projects__cards">
-					{featuredProjects.map((card, index) => (
+					{cardsContent.map((card, index) => (
 						<Card
-							key={index} //React needs this to track each component efficiently
+							key={card.index} //React needs this to track each component efficiently
 							title={card.title}
+							img={card.img}
 							text={card.text}
 							skill={card.skill}
 							link={card.link}

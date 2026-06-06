@@ -1,23 +1,28 @@
 import React from "react";
 import "./card.scss";
-export default function Card({ title, text, link, skill }) {
+import ButtonGreen from "../Button/ButtonGreen";
+export default function Card({ title, text, link, skill, img }) {
 	return (
 		<div className="card">
 			<div className="card__text-container">
 				<h3 className="card__title h3">{title}</h3>
+			</div>
+			<div className="img__container">
+				<img className="card__img" src={img} />
+			</div>
+			<div className="card__text-container">
 				<p className="card__text">{text}</p>
 			</div>
 			<div className="card__skills-container">
-				{skill.map((skillItem, index) => (
-					<p key={index} className="card__skill">
-						{skillItem}
+				{skill.map(({ id, name, icon }) => (
+					<p key={id} className="card__skill">
+						<i className={`card__skill__icon bx ${icon}`}></i>
+						{name}
 					</p>
 				))}
 			</div>
 			<div className="card__btn-container">
-				<a href={link} className="card__btn btn link" target="_blank">
-					More on Github
-				</a>
+				<ButtonGreen className="card__btn btn link" target="_blank" link={link} text={"More on GitHub"} />
 			</div>
 		</div>
 	);

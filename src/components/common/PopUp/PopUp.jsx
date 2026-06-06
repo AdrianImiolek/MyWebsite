@@ -1,10 +1,10 @@
 import React from "react";
 import "./popup.scss";
-export default function PopUp({ onClose }) {
+export default function PopUp({ isOpen, onClose }) {
 	return (
 		<>
-			<div className="popup-shadow" onClick={onClose}></div>
-			<div className="popup">
+			<div className={`${isOpen ? 'popup__shadow' : ""}`} onClick={onClose}></div>
+			<div className={`popup ${isOpen ? 'popup--active' : ""}`}>
 				<div className="popup__container">
 					<h3 className="popup__title h3">
 						Employment <span className="green-accent">history</span>

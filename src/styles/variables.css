@@ -23,6 +23,7 @@
 	--clamp-logo: clamp(1rem, 2.5rem + 1vw, 4rem);
 	--clamp-h2: clamp(1rem, 2rem + 1vw, 4rem);
 	--clamp-h3: clamp(1rem, 1.8rem + 1vw, 4rem);
+	--clamp-txt-lg: clamp(1rem, 1.8rem + 1vw, 2.5rem);
 	--clamp-txt: clamp(1rem, 1.5rem + 1vw, 2rem);
 	--clamp-txt-sm: clamp(1rem, 1rem + 1vw, 2rem);
 }

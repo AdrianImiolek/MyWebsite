@@ -8,14 +8,27 @@ export default function AboutMain() {
 	const togglePopUp = () => {
 		if (!isPopUpOpen) {
 			// Opening popup - disable scrolling
-			document.body.style.overflowY = "hidden";
+			// document.body.style.overflowY = "hidden";
 			setIsPopUpOpen(true);
 		} else {
-			// Closing popup - enable scrolling
-			document.body.style.overflowY = "auto";
+
+			// document.body.style.overflowY = "auto";
 			setIsPopUpOpen(false);
 		}
 	};
+
+	const skills = [
+		{ id: 1, text: "English" },
+		{ id: 2, text: "Html" },
+		{ id: 3, text: "Css" },
+		{ id: 4, text: "JavaScript" },
+		{ id: 5, text: "RWD" },
+		{ id: 6, text: "React" },
+		{ id: 8, text: "Tailwind" },
+		{ id: 7, text: "Node.js" },
+
+	]
+
 	return (
 		<main className="main">
 			<section className="about section">
@@ -28,13 +41,9 @@ export default function AboutMain() {
 							My <span className="green-accent">skills</span>
 						</h3>
 						<div className="about__skills">
-							<p className="about__skill">HTML5</p>
-							<p className="about__skill">CSS3</p>
-							<p className="about__skill">JavaScript</p>
-							<p className="about__skill">BEM</p>
-							<p className="about__skill">English</p>
-							<p className="about__skill">React</p>
-							<p className="about__skill">RWD</p>
+							{skills.map(({ id, text }) => (
+								<p key={id} className="about__skill">{text}</p>
+							))}
 						</div>
 					</div>
 					<div className="about__card">
@@ -80,7 +89,7 @@ export default function AboutMain() {
 				</div>
 				{/* CONDITIONAL RENDERING: Only render PopUp component if isPopUpOpen is true */}
 				{/* This is JavaScript logical AND operator - if left side is true, render right side */}
-				{isPopUpOpen && <PopUp onClose={togglePopUp} />}
+				<PopUp isOpen={isPopUpOpen} onClose={togglePopUp} />
 			</section>
 		</main>
 	);

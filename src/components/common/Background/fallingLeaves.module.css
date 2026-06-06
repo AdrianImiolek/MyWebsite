@@ -1,7 +1,10 @@
 .fallingAnimation {
 	position: fixed;
+	display: grid;
+	justify-items: center;
 	width: 100%;
-	top: -20%;
+	grid-template-columns: repeat(4, 1fr);
+	top:0;
 	min-height: 100vh;
 	height: 100vh;
 	z-index: -1000;
@@ -10,25 +13,27 @@
 
 .leaf {
 	position: relative;
-	opacity: 0.5;
+	opacity: 0.3;
 	color: var(--bg-color);
 	font-size: clamp(2rem, 2.5rem + 1vw, 4rem);
+	transform-origin: center;
+	display: block;
+
 }
 
-.leaf:nth-child(1) {
-	left: 5%;
+.leaf__1 {
 	animation: fall 12s infinite linear;
 }
-.leaf:nth-child(2) {
-	left: 50%;
+
+.leaf__2 {
 	animation: fall 17s infinite linear;
 }
-.leaf:nth-child(3) {
-	left: 75%;
+
+.leaf__3 {
 	animation: fall 20s infinite linear;
 }
-.leaf:nth-child(4) {
-	left: 15%;
+
+.leaf__4 {
 	animation: fall 15s infinite linear;
 }
 
@@ -55,11 +60,5 @@
 
 	100% {
 		transform: translateX(10px) translateY(120vh) rotate(45deg);
-	}
-}
-
-@media (min-width: 1700px) {
-	.leaf:nth-child(3) {
-		left: 65%;
 	}
 }
