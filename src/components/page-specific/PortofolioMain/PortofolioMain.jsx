@@ -6,8 +6,7 @@ export default function PortfolioMain(props) {
 			index: 1,
 			title: "Kawusia",
 			img: "/images/Kawusia.webp",
-			text: "A showcase website for a point-and-click game studio, designed to highlight their games while providing a simple and user-friendly navigation experience.",
-			skill: [
+			text: `KawusiaWebsite is a promotional website for a café called "Kawiarnia Kawusia". It presents the café's offer, atmosphere, and key information to potential customers in a clean and visually appealing way.`, skill: [
 				{ id: 1, name: "React", icon: "bxl-react" },
 				{ id: 2, name: "Tailwind", icon: "bxl-tailwind-css" },
 				{ id: 3, name: "JavaScript", icon: "bxl-javascript" },
@@ -17,7 +16,7 @@ export default function PortfolioMain(props) {
 		{
 			index: 2,
 			title: "Plant Database",
-			text: "A modern, nature-inspired website for a fictional brand focused on clean design, responsive layout, and interactive elements to enhance the user experience.",
+			text: "Plant Search is a fullstack web application that allows users to search for plants and browse detailed information about them. The frontend communicates with a custom backend, which handles API requests to an external plant data source, keeping sensitive credentials secure on the server side.",
 			img: "/images/PlantDatabase.webp",
 			skill: [
 				{ id: 1, name: "React", icon: "bxl-react" },
@@ -31,7 +30,7 @@ export default function PortfolioMain(props) {
 		{
 			index: 3,
 			title: "Springfield",
-			text: "A relaxing browser game where players grow and manage flowers to generate resources, featuring ambient music, soft visuals, and simple progression mechanics.",
+			text: "Springfield is a project management web application designed for creative teams. It provides an intuitive interface for organizing tasks, tracking progress, and enabling seamless team collaboration - all in one place.",
 			img: "/images/Springfield.webp",
 			skill: [
 				{ id: 1, name: "React", icon: "bxl-react" },
@@ -43,7 +42,7 @@ export default function PortfolioMain(props) {
 		{
 			index: 4,
 			title: "Click 2 Escape",
-			text: "A relaxing browser game where players grow and manage flowers to generate resources, featuring ambient music, soft visuals, and simple progression mechanics.",
+			text: "C2E Website is a simple, responsive, and mobile-friendly website built for a point-and-click game development brand. The project was created with performance, accessibility, and clean UI design in mind.",
 			img: "/images/C2E.webp",
 			skill: [
 				{ id: 1, name: "HTML5", icon: "bxl-html5" },
@@ -55,7 +54,7 @@ export default function PortfolioMain(props) {
 		{
 			index: 5,
 			title: "Willow & Oak",
-			text: "A relaxing browser game where players grow and manage flowers to generate resources, featuring ambient music, soft visuals, and simple progression mechanics.",
+			text: "A clean, responsive front-end website built for a nature-themed brand or business. Designed with a mobile-first approach, this project highlights HTML, CSS, and JavaScript skills for interactive, minimalist web design.",
 			img: "/images/Willow&Oak.webp",
 			skill: [
 				{ id: 1, name: "HTML5", icon: "bxl-html5" },
