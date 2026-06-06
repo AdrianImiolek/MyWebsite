@@ -44,7 +44,7 @@
 @media (min-width: 992px) {
 	.header {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 1fr 1fr;
 
 		&__ctas {
 			margin-top: var(--rem-xlg)
