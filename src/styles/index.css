@@ -53,6 +53,7 @@ body {
 
 .img__container {
 	width: 100%;
+	min-height: 300px;
     background: transparent;
     transition: 0.3s;
     overflow: hidden;
@@ -81,5 +82,11 @@ body {
 	::view-transition-old(root),
 	::view-transition-new(root) {
 		animation-duration: 0.3s;
+	}
+}
+
+@media (min-width: 992px) {
+	.img__container {
+		min-height: 600px;
 	}
 }

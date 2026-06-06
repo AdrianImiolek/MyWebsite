@@ -28,8 +28,7 @@ export default function ContactMain() {
 							<ButtonGreen className="contact__content__link" link="" text={isClicked ? "Copied to clipboard!" : "Copy email: contact@adek.dev"} onClick={() => copyToClipboard("contact@adek.dev")} />
 						</div>
 						<div className="img__container">
-							<img className="contact__image" src="/images/AdrianAndZrazik.webp" width={1400}
-								height={1747} alt="Adrian holding Zrazik" />
+							<img className="contact__image" src="/images/AdrianAndZrazik.webp" alt="Adrian holding Zrazik" />
 						</div>
 					</div>
 				</section>

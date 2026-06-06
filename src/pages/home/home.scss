@@ -24,12 +24,13 @@
 			width: 100%;
 		}
 
+		// width: auto, height: auto They tell the browser "don't use the attributes as the literal size, calculate the size naturally based on the image's intrinsic ratio and constraints like max-height".
 		&-img {
 			padding: var(--rem-md);
 			max-width: 100%;
 			max-height: 800px;
 			width: auto;
-			height: auto; 
+			height: auto;
 		}
 	}
 
