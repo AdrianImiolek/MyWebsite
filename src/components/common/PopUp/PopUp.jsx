@@ -9,7 +9,7 @@ export default function PopUp({ isOpen, onClose }) {
 					<h3 className="popup__title h3">
 						Employment <span className="green-accent">history</span>
 					</h3>
-					<p className="popup__text">I'm currently looking for a job :)</p>
+					<p className="popup__text">I'm at the beginning of my journey, you could change that by employing me :)</p>
 				</div>
 				<button className="popup__btn btn" onClick={onClose}>
 					Close
