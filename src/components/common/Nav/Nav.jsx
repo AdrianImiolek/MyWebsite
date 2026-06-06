@@ -42,7 +42,7 @@ export default function Nav() {
 		setTimeout(() => {
 			setIsDark(!isDark);
 			document.documentElement.classList.toggle("dark");
-		}, 320)
+		}, 301)
 	};
 
 	return (

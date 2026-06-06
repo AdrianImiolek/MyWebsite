@@ -28,11 +28,22 @@
 	--clamp-txt-sm: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
-.dark {
+@media (prefers-color-scheme: dark) {
+  :root {
+   	--main-color: #2d683b;
+	--secondary-color: #86d298;
+	--text-color: #362b32;
+	--bg-color: #ffffff;
+	--card-bg-color: #423d40;
+	--card-tools: #42684b;
+  }
+}
+
+ .dark {
 	--main-color: #2d683b;
 	--secondary-color: #86d298;
 	--text-color: #362b32;
 	--bg-color: #ffffff;
 	--card-bg-color: #423d40;
 	--card-tools: #42684b;
-}
+} 
