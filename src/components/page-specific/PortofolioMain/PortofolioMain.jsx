@@ -30,7 +30,7 @@ export default function PortfolioMain(props) {
 		{
 			index: 3,
 			title: "Springfield",
-			text: "Springfield is a project management web application designed for creative teams. It provides an intuitive interface for organizing tasks, tracking progress, and enabling seamless team collaboration - all in one place.",
+			text: "Springfield is a SaaS-style landing page concept for a project management tool aimed at creative teams. Built with React and client-side routing, it showcases modern UI design and multi-page navigation structure - demonstrating frontend architecture skills in a real-world product context.",
 			img: "/images/Springfield.webp",
 			skill: [
 				{ id: 1, name: "React", icon: "bxl-react" },
