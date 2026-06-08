@@ -13,17 +13,20 @@ export default function Card({ title, text, link, skill, img }) {
 			<div className="card__text-container">
 				<p className="card__text">{text}</p>
 			</div>
-			<div className="card__skills-container">
-				{skill.map(({ id, name, icon }) => (
-					<p key={id} className="card__skill">
-						<i className={`card__skill__icon bx ${icon}`}></i>
-						{name}
-					</p>
-				))}
-			</div>
-			<div className="card__btn-container">
-				<ButtonGreen className="card__btn btn link" target="_blank" link={link} text={"More on GitHub"} />
-			</div>
+
+
+				<div className="card__skills-container">
+					{skill.map(({ id, name, icon }) => (
+						<p key={id} className="card__skill">
+							<i className={`card__skill__icon bx ${icon}`}></i>
+							{name}
+						</p>
+					))}
+				</div>
+				<div className="card__btn-container">
+					<ButtonGreen className="card__btn btn link" target="_blank" link={link} text={"More on GitHub"} />
+				</div>
+
 		</div>
 	);
 }

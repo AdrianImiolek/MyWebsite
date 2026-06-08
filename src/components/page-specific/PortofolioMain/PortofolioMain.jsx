@@ -6,7 +6,7 @@ export default function PortfolioMain(props) {
 			index: 1,
 			title: "Kawusia",
 			img: "/images/Kawusia.webp",
-			text: `KawusiaWebsite is a promotional website for a café called "Kawiarnia Kawusia". It presents the café's offer, atmosphere, and key information to potential customers in a clean and visually appealing way.`, skill: [
+			text: `Kawusia is a promotional website for a café called "Kawiarnia Kawusia". It presents the café's offer, atmosphere, and key information to potential customers in a clean and visually appealing way.`, skill: [
 				{ id: 1, name: "React", icon: "bxl-react" },
 				{ id: 2, name: "Tailwind", icon: "bxl-tailwind-css" },
 				{ id: 3, name: "JavaScript", icon: "bxl-javascript" },
