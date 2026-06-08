@@ -59,9 +59,8 @@ export default function AboutMain() {
 							but also accessible and user-friendly.
 						</p>
 						<p className="about__txt">
-							I believe in learning through building - from developing
-							interactive games like my incremental flower game that deepened my
-							JavaScript understanding, to creating business websites like
+							I believe in learning through building - from developing interactive apps
+							like my Plant Search website that deepened my understanding of fullstack development, to creating business websites like
 							Willow & Oak that showcase minimalistic design principles. Whether
 							it's helping friends bring their creative visions to life or
 							crafting engaging web experiences, I'm driven by the challenge of
